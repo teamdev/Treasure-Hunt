@@ -1,0 +1,36 @@
+<ion-view title="Strumenti">
+  <ion-content class="padding">
+    <div>
+      <div class="row">
+        <div class="col">Latitudine</div>
+        <div class="col text-right">{{currentLocation.latitude}}</div>
+      </div>
+      <div class="row">
+        <div class="col">Longitudine</div>
+        <div class="col text-right">{{currentLocation.longitude}}</div>
+      </div>
+      <div class="row">
+        <div class="col">Il tuo percorso</div>
+        <div class="col text-right">{{route}}</div>
+      </div>
+
+      <hr />
+
+
+      <!--<div class="row">
+        <div class="item item-checkbox  no-background no-border text-light">
+          <label class="checkbox">
+            <input type="checkbox" ng-click="backtracking()" ng-model="backgroundtracking">
+          </label>
+          Abilita tracking in backgroung
+        </div>
+      </div>-->
+      <!--<hr />-->
+      <div class="row">
+        <!--<button ng-click="test()" class="button col">Check</button>-->
+        <button ng-click="updateposition()" class="button col">Invia posizione</button>
+        <button ng-click="restart()" class="button col">Ricomincia</button>
+      </div>
+    </div>
+  </ion-content>
+</ion-view>

@@ -1,0 +1,45 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <title></title>
+  <script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+  <script src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+</head>
+<body>
+  <input type="text" name="" id="apikey" />
+  <input type="text" name="" id="registrationid" />
+
+  <input type="submit" onclick="sendTestPushNotification()" />
+  <script>
+
+    function sendTestPushNotification() {
+
+      var testpush = {
+        data: {
+          message: "Il messaggio",
+          title: "Il Titolo",
+          subtitle: "Il sottotitolo",
+          tickerText: "Ticker Text",
+          vibrate: 1,
+          sound: 1,
+        },
+        registration_ids: [ $("#registrationid").val() ]
+      };
+
+      $.ajax({
+        url: "https://android.googleapis.com/gcm/send",
+        async: false,
+        type: "POST",
+        contentType: "application/json",
+        data: testpush,
+        headers: {
+          Authorization: "key=" + $("#apikey").val()
+        }
+      });
+    }
+
+
+
+  </script>
+</body>
+</html>

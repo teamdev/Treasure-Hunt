@@ -1,0 +1,178 @@
+/* Empty. Add your own CSS if you like */
+.center {
+  margin: auto;
+  text-align: center;
+}
+
+.circular {
+  width: 150px;
+  height: 150px;
+  border-radius: 150px;
+  -webkit-border-radius: 150px;
+  -moz-border-radius: 150px;
+}
+
+  .circular.center, .circular.center > h1, .circular.center > h2, .circular.center > h3,
+  .circular.center > h4, .circular.center > h5, .circular.center > h6 {
+    line-height: 150px;
+  }
+
+  .circular.shadow {
+    box-shadow: 0 0 8px rgba(0, 0, 0, .8);
+    -webkit-box-shadow: 0 0 8px rgba(0, 0, 0, .8);
+    -moz-box-shadow: 0 0 8px rgba(0, 0, 0, .8);
+  }
+
+.text-dark {
+  color: rgba(0, 0, 0, .8);
+}
+
+.text-light {
+  color: #fff;
+}
+
+.no-background {
+  background: none !important;
+}
+
+.no-border {
+  border: none !important;
+}
+
+.full-height {
+  height: 100%;
+  top: 0px;
+  bottom: 0px;
+}
+
+.full-width {
+  width: 100%;
+  left: 0px;
+  right: 0px;
+}
+
+.has-tabs, .bar-footer.has-tabs {
+bottom: 49px !important;
+}
+.has-header {
+top: 54px !important;
+}
+
+
+.relativize {
+  position: relative !important;
+}
+
+.absolutize {
+  position: absolute !important;
+}
+
+
+#map {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  z-index: 1;
+}
+
+#compassHousing {
+  margin-left: 5px;
+  margin-top: 5px;
+  background-color: #CCC;
+  border-style: solid;
+  border-width: 1px;
+  border-radius: 62.5px;
+  padding: 2px;
+  position: absolute;
+  z-index: 2;
+  opacity: 0.77;
+  -moz-box-shadow: 2px 3px 10px 2px #333;
+  -webkit-box-shadow: 2px 3px 10px 2px #333;
+  box-shadow: 2px 3px 10px 2px #333;
+}
+
+#compassFace {
+  z-index: -1;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+#compassNeedle {
+  position: absolute;
+  top: 0;
+  left: 0;
+  -webkit-transition-property: -webkit-transform;
+  -webkit-transition-duration: .5s;
+  -webkit-transition-timing-function: ease-out;
+}
+
+#map_zoom_slider {
+  /*top:initial;*/
+  left:initial;
+  right:20px;
+  /*bottom:20px;*/
+}
+
+.esriControlsBR {
+  margin-right:10px;
+}
+
+@-webkit-keyframes pulse {
+  0% {
+    opacity: 1.0;
+  }
+
+  45% {
+    opacity: 0.20;
+  }
+
+  100% {
+    opacity: 1.0;
+  }
+}
+
+@-moz-keyframes pulse {
+  0% {
+    opacity: 1.0;
+  }
+
+  45% {
+    opacity: 0.20;
+  }
+
+  100% {
+    opacity: 1.0;
+  }
+}
+
+#map_graphics_layer {
+  -webkit-animation-duration: 3s;
+  -webkit-animation-iteration-count: infinite;
+  -webkit-animation-name: pulse;
+  -moz-animation-duration: 3s;
+  -moz-animation-iteration-count: infinite;
+  -moz-animation-name: pulse;
+}
+/* compass */
+@media(orientation: landscape) {
+  #compass {
+    margin-top: 20px;
+    margin-left: 20px;
+    opacity: 0.85;
+    filter: alpha(opacity=85);
+    position: absolute;
+    z-index: 2;
+  }
+}
+
+@media(orientation: portrait) {
+  #compass {
+    margin-top: 20px;
+    margin-left: 20px;
+    opacity: 0.85;
+    filter: alpha(opacity=85);
+    position: absolute;
+    z-index: 2;
+  }
+}

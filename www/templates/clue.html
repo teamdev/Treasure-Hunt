@@ -1,0 +1,65 @@
+﻿<ion-view title="Caccia al tesoro">
+  <ion-nav-buttons side="left">
+    <img src="img/icons/favicon-42x42.png" />
+  </ion-nav-buttons>
+  <ion-nav-buttons side="right">
+    <button class="button icon button-icon" style="min-width:50px; font-size:3em;" ng-click="takeaSelfie()"><i class="ion ion-camera"></i></button>
+  </ion-nav-buttons>
+  <ion-content class="padding">
+    <div ng-repeat="c in clues track by $index">
+      <div class="row">
+        <div class="col text-center">
+          <div class="circular center" style="background:#fff;"><h1 class="text-dark" style="font-size:52px;">{{$index +1}}</h1></div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col text-center">
+          <h4>{{c.text}}</h4>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col text-center">
+          <h1><i class="ion ion-chevron-down"></i></h1>
+        </div>
+      </div>
+    </div>
+    <div ng-show="!youwin">
+      <div class="row">
+        <div class="col text-center">
+          <div class="circular center" style="background:#fff;" ng-click="updateposition()">
+            <h1 class="text-dark" style="font-size:52px;">
+              <p>
+                <i class="ion" ng-class="{'ion-help': !loading, 'ion-loading-a': loading}"></i>
+              </p>
+            </h1>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col text-center">
+          <h3>Cerca il prossimo indizio, appena ti avvicinerai alla soluzione compariranno altre indicazioni, oppure clicca sul punto di domanda per vedere se sei sul punto giusto. </h3>
+        </div>
+      </div>
+    </div>
+    <div ng-show="youwin">
+      <div class="row">
+        <div class="col text-center">
+          <div class="circular center" style="background:#fff;">
+            <h1 class="text-dark" style="font-size:52px;">
+              <p>
+                <i class="ion ion-trophy"></i>
+              </p>
+            </h1>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col text-center">
+          <h3>Complimenti!! sei riuscito a trovare il tesoro !</h3>
+        </div>
+      </div>
+    </div>
+
+
+  </ion-content>
+</ion-view>
